@@ -12,7 +12,7 @@ jobs:
     - stage: build
       env:
         - FOO=foo
-      script: mvn test -B
+      script: echo "hello world" && mvn test -B  
 
 branches:
   except:
