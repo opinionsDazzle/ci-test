@@ -4,6 +4,7 @@ env:
   - FOO=foo2
   - FOO2=fsdf
 jdk:
+  - oraclejdk8
   - oraclejdk9
 before_install:
   - pip install --user codecov
