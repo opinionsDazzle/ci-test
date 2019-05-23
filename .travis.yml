@@ -9,12 +9,14 @@ after_success:
 
 jobs:
   include:
-    - stage: build
+    - stage: build-test
       env:
         - FOO=foo
       script: echo "hello world" && mvn test -B
     - 
       script: echo "hello world2" && mvn test -B 
+    - stage: back-build
+      script: echo "hahahaha"
 
 branches:
   except:
