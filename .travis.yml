@@ -12,7 +12,8 @@ jobs:
     - stage: build
       env:
         - FOO=foo
-      script: echo "hello world" && mvn test -B  
+      script: echo "hello world" && mvn test -B 
+      script: echo "hello world2" && mvn test -B 
 
 branches:
   except:
