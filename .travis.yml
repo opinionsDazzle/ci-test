@@ -4,7 +4,7 @@ env:
   - FOO=foo2
   - FOO2=fsdf
 jdk:
-  - oraclejdk8
+  - oraclejdk7
 before_install:
   - pip install --user codecov
 after_success:
@@ -13,6 +13,8 @@ after_success:
 jobs:
   include:
     - stage: build-test
+      jdk: 
+        - oraclejdk8
       env:
         - FOO=foo
       script: echo "hello world" && mvn test -B
