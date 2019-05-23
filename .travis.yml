@@ -6,6 +6,14 @@ before_install:
   - pip install --user codecov
 after_success:
   - codecov
+
+jobs:
+  include:
+    - stage: build
+      env:
+        - FOO=foo
+      script: mvn test -B
+
 branches:
   except:
     - appveyor
