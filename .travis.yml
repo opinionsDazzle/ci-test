@@ -1,5 +1,8 @@
 
 language: java
+env:
+  - FOO=foo2
+
 jdk:
   - oraclejdk8
 before_install:
