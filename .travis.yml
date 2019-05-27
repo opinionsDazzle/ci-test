@@ -16,6 +16,10 @@ before_install:
 after_success:
   - codecov
 
+cache:
+  directories:
+  - $HOME/.m2
+
 jobs:
   include:
     - stage: build-test
