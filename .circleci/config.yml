@@ -6,4 +6,5 @@ jobs:
     parallelism: 1
     steps:
       - checkout # check out the code in the project directory
-      - run: mvn clean package
+      - run: echo "hahahahah"
+      - run: mvn clean package -Dmaven.test.skip=true
