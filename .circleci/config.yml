@@ -3,7 +3,7 @@ jobs:
   build:
     docker: # use the docker executor type; machine and macos executors are also supported
       - image: circleci/openjdk:8-jdk # the primary container, where your job's commands are run
-    parallelism: 3
+    parallelism: 1
     steps:
       - checkout # check out the code in the project directory
       - run: mvn clean package
