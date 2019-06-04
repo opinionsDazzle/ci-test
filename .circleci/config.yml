@@ -5,22 +5,18 @@ jobs:
       - image: circleci/openjdk:8-jdk # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
-      - run: echo "hahahahah"
+      - run: echo $CIRCLE_WORKING_DIRECTORY
       - run: mvn clean package -Dmaven.test.skip=true
   test-flow:
     docker: # use the docker executor type; machine and macos executors are also supported
       - image: circleci/openjdk:8-jdk # the primary container, where your job's commands are run
     steps:
-      - run : echo "test-flow"
+      - run : echo $CIRCLE_WORKING_DIRECTORY
     
 
 workflows:
   version: 2
   build_and_test:
-    jobs:
-      - build
-      - test-flow
-  build_and_test2:
     jobs:
       - build
       - test-flow:
