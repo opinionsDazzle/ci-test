@@ -20,7 +20,7 @@ workflows:
     jobs:
       - build
       - test-flow
-  build_and_test:
+  build_and_test2:
     jobs:
       - build
       - test-flow:
