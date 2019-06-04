@@ -8,3 +8,12 @@ jobs:
       - checkout # check out the code in the project directory
       - run: echo "hahahahah"
       - run: mvn clean package -Dmaven.test.skip=true
+
+  test-flow:
+    steps:
+      - run : echo "test-flow"
+    
+
+
+
+
