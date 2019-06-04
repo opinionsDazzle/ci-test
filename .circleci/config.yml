@@ -10,6 +10,8 @@ jobs:
       - run: mvn clean package -Dmaven.test.skip=true
 
   test-flow:
+    docker: # use the docker executor type; machine and macos executors are also supported
+      - image: circleci/openjdk:8-jdk # the primary container, where your job's commands are run
     steps:
       - run : echo "test-flow"
     
